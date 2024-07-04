@@ -40,10 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add detailed information for other categories and values
     };
 
-    const detailedRecommendation = detailedRecommendations[category][value] || 'No detailed information available for this selection.';
-
-    detailedRecommendationDiv.innerHTML = `
-        <h2>${category}: ${value}</h2>
-        <p>${detailedRecommendation}</p>
-    `;
+    if (category && value && detailedRecommendations[category] && detailedRecommendations[category][value]) {
+        const detailedRecommendation = detailedRecommendations[category][value];
+        detailedRecommendationDiv.innerHTML = `
+            <h2>${category}: ${value}</h2>
+            <p>${detailedRecommendation}</p>
+        `;
+    } else {
+        detailedRecommendationDiv.innerHTML = '<p>No detailed information available for this selection.</p>';
+    }
 });
