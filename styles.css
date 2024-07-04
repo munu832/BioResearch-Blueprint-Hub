@@ -164,3 +164,24 @@ button:active {
         width: 100%;
     }
 }
+
+.topic-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.topic-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.topic-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.topic-
