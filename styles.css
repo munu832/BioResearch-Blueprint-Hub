@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ffecd2 0%, #ffa600 100%);
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -43,6 +43,11 @@ header {
 
 .question {
     margin-bottom: 25px;
+    color: #2c3e50; /* Darker color for questions */
+}
+
+.question.answered {
+    color: #ffa600; /* Different color when answered */
 }
 
 label {
@@ -55,7 +60,7 @@ label {
 select {
     width: 100%;
     padding: 12px;
-    border: 2px solid #ffa600;
+    border: 2px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
     transition: border-color 0.3s ease;
@@ -63,11 +68,11 @@ select {
 
 select:focus {
     outline: none;
-    border-color: #ff6361;
+    border-color: #003f5c;
 }
 
 button {
-    background-color: #ff6361;
+    background-color: #003f5c;
     color: #ffffff;
     padding: 15px 30px;
     border: none;
@@ -81,7 +86,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff4d4d;
+    background-color: #002f48;
 }
 
 button:active {
@@ -173,7 +178,7 @@ button:active {
 }
 
 .topic-btn {
-    background-color: #ffa600;
+    background-color: #003f5c;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -182,7 +187,7 @@ button:active {
 }
 
 .topic-btn:hover {
-    background-color: #ff6361;
+    background-color: #002f48;
 }
 
 /* Adding images */
