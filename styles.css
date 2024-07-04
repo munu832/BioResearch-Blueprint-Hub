@@ -1,10 +1,96 @@
-/* Existing styles remain the same */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    color: #7f8c8d;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.question {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin: 30px auto 0;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
 
 .author-info {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
 }
 
 .author-card {
@@ -13,6 +99,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 15px;
     display: flex;
+    justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -22,16 +109,8 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.author-image {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
-    object-fit: cover;
-}
-
 .author-details {
-    flex-grow: 1;
+    text-align: center;
 }
 
 .author-details h3 {
@@ -64,23 +143,24 @@
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
     .author-info {
-        position: static;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .author-card {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .author-image {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .author-details {
-        text-align: center;
+        width: 100%;
     }
 }
