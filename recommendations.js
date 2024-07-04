@@ -4,32 +4,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const recommendations = {
         'Research Topic': {
-            'ecology': 'Focus on current ecological challenges like climate change impacts or biodiversity conservation.',
-            'genetics': 'Explore emerging areas like CRISPR gene editing or personalized medicine.',
-            'microbiology': 'Investigate antibiotic resistance or microbiome research.',
-            'biochemistry': 'Look into protein engineering or metabolomics.'
+            'Ecology': 'Focus on current ecological challenges like climate change impacts or biodiversity conservation.',
+            'Genetics': 'Explore emerging areas like CRISPR gene editing or personalized medicine.',
+            'Microbiology': 'Investigate antibiotic resistance or microbiome research.',
+            'Biochemistry': 'Look into protein engineering or metabolomics.'
         },
         'Study Objective': {
-            'patterns': 'Use advanced data visualization techniques to identify and analyze patterns.',
-            'hypotheses': 'Formulate clear, testable hypotheses and design experiments to validate them.',
-            'methods': 'Conduct a thorough literature review of existing methods and propose innovative approaches.'
+            'Patterns': 'Use advanced data visualization techniques to identify and analyze patterns.',
+            'Hypotheses': 'Formulate clear, testable hypotheses and design experiments to validate them.',
+            'Methods': 'Conduct a thorough literature review of existing methods and propose innovative approaches.'
         },
         'Study Type': {
-            'experimental': 'Ensure proper randomization and blinding procedures in your experimental design.',
-            'observational': 'Be aware of potential biases and confounding factors in observational studies.',
-            'survey': 'Ensure survey validity and reliability through proper questionnaire design and sampling methods.',
-            'meta-analysis': 'Develop a comprehensive search strategy and use appropriate statistical techniques for data synthesis.'
+            'Experimental': 'Ensure proper randomization and blinding procedures in your experimental design.',
+            'Observational': 'Be aware of potential biases and confounding factors in observational studies.',
+            'Survey': 'Ensure survey validity and reliability through proper questionnaire design and sampling methods.',
+            'Meta-analysis': 'Develop a comprehensive search strategy and use appropriate statistical techniques for data synthesis.'
         },
         'Data Collection': {
-            'surveys': 'Ensure question wording is clear, unbiased, and aligned with your research objectives.',
-            'experiments': 'Develop detailed protocols to ensure consistency and reproducibility in your experiments.',
-            'observations': 'Use standardized observation protocols and consider inter-observer reliability.',
-            'secondary': 'Critically evaluate the quality and reliability of secondary data sources before incorporation.'
+            'Surveys': 'Ensure question wording is clear, unbiased, and aligned with your research objectives.',
+            'Experiments': 'Develop detailed protocols to ensure consistency and reproducibility in your experiments.',
+            'Observations': 'Use standardized observation protocols and consider inter-observer reliability.',
+            'Secondary': 'Critically evaluate the quality and reliability of secondary data sources before incorporation.'
         },
         'Data Type': {
-            'quantitative': 'Plan for appropriate statistical analyses and consider power calculations for sample size.',
-            'qualitative': 'Develop a robust coding scheme and consider using qualitative analysis software.',
-            'both': 'Design a mixed-methods approach that integrates quantitative and qualitative data effectively.'
+            'Quantitative': 'Plan for appropriate statistical analyses and consider power calculations for sample size.',
+            'Qualitative': 'Develop a robust coding scheme and consider using qualitative analysis software.',
+            'Both': 'Design a mixed-methods approach that integrates quantitative and qualitative data effectively.'
         }
     };
 
