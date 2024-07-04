@@ -1,23 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const recommendationsDiv = document.getElementById('recommendations');
     const urlParams = new URLSearchParams(window.location.search);
-    let recommendations = '';
-
-    recommendations += getRecommendation('Research Topic', urlParams.get('researchTopic'));
-    recommendations += getRecommendation('Study Objective', urlParams.get('objective'));
-    recommendations += getRecommendation('Study Type', urlParams.get('studyType'));
-    recommendations += getRecommendation('Data Collection', urlParams.get('dataCollection'));
-    recommendations += getRecommendation('Data Type', urlParams.get('dataType'));
-
-    if (recommendations === '') {
-        recommendations = '<p>No recommendations available. Please fill out the form.</p>';
-    }
-
-    recommendationsDiv.innerHTML = recommendations;
-});
-
-function getRecommendation(title, value) {
-    if (!value) return '';
 
     const recommendations = {
         'Research Topic': {
@@ -27,34 +10,58 @@ function getRecommendation(title, value) {
             'biochemistry': 'Look into protein engineering or metabolomics.'
         },
         'Study Objective': {
-            'patterns': 'Use advanced data visualization techniques.',
-            'hypotheses': 'Formulate clear, testable hypotheses.',
-            'methods': 'Conduct a thorough literature review of existing methods.'
+            'patterns': 'Use advanced data visualization techniques to identify and analyze patterns.',
+            'hypotheses': 'Formulate clear, testable hypotheses and design experiments to validate them.',
+            'methods': 'Conduct a thorough literature review of existing methods and propose innovative approaches.'
         },
         'Study Type': {
-            'experimental': 'Ensure proper randomization and blinding procedures.',
-            'observational': 'Be aware of potential biases and confounding factors.',
-            'survey': 'Ensure survey validity and reliability.',
-            'meta-analysis': 'Develop a comprehensive search strategy.'
+            'experimental': 'Ensure proper randomization and blinding procedures in your experimental design.',
+            'observational': 'Be aware of potential biases and confounding factors in observational studies.',
+            'survey': 'Ensure survey validity and reliability through proper questionnaire design and sampling methods.',
+            'meta-analysis': 'Develop a comprehensive search strategy and use appropriate statistical techniques for data synthesis.'
         },
         'Data Collection': {
-            'surveys': 'Ensure question wording is clear and unbiased.',
-            'experiments': 'Develop detailed protocols to ensure consistency.',
-            'observations': 'Use standardized observation protocols.',
-            'secondary': 'Critically evaluate the quality and reliability of secondary data sources.'
+            'surveys': 'Ensure question wording is clear, unbiased, and aligned with your research objectives.',
+            'experiments': 'Develop detailed protocols to ensure consistency and reproducibility in your experiments.',
+            'observations': 'Use standardized observation protocols and consider inter-observer reliability.',
+            'secondary': 'Critically evaluate the quality and reliability of secondary data sources before incorporation.'
         },
         'Data Type': {
-            'quantitative': 'Plan for appropriate statistical analyses.',
-            'qualitative': 'Develop a robust coding scheme.',
+            'quantitative': 'Plan for appropriate statistical analyses and consider power calculations for sample size.',
+            'qualitative': 'Develop a robust coding scheme and consider using qualitative analysis software.',
             'both': 'Design a mixed-methods approach that integrates quantitative and qualitative data effectively.'
         }
     };
 
-    const recommendation = recommendations[title][value] || 'Ensure your choice aligns with your research goals and methodology.';
+    function getRecommendation(category, value) {
+        if (!category || !value) return '';
 
-    return `<div class="recommendation">
-                <h3>${title}: ${value}</h3>
+        const recommendation = recommendations[category][value] || 'Ensure your choice aligns with your research goals and methodology.';
+
+        return `
+            <div class="recommendation">
+                <h3>${category}: ${value}</h3>
                 <p>${recommendation}</p>
-                <a href="detail.html?category=${encodeURIComponent(title)}&value=${encodeURIComponent(value)}">Get more information</a>
-            </div>`;
-}
+                <a href="detail.html?category=${encodeURIComponent(category)}&value=${encodeURIComponent(value)}">Get more information</a>
+            </div>
+        `;
+    }
+
+    function displayRecommendations() {
+        let recommendationsHTML = '';
+
+        recommendationsHTML += getRecommendation('Research Topic', urlParams.get('researchTopic'));
+        recommendationsHTML += getRecommendation('Study Objective', urlParams.get('objective'));
+        recommendationsHTML += getRecommendation('Study Type', urlParams.get('studyType'));
+        recommendationsHTML += getRecommendation('Data Collection', urlParams.get('dataCollection'));
+        recommendationsHTML += getRecommendation('Data Type', urlParams.get('dataType'));
+
+        if (recommendationsHTML === '') {
+            recommendationsHTML = '<p>No recommendations available. Please fill out the form.</p>';
+        }
+
+        recommendationsDiv.innerHTML = recommendationsHTML;
+    }
+
+    displayRecommendations();
+});
