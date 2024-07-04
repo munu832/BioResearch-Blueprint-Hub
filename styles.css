@@ -86,7 +86,7 @@ button {
 }
 
 button:hover {
-    background-color: #002f48;
+    background-color: #ff6361;
 }
 
 button:active {
@@ -134,14 +134,14 @@ button:active {
 .linkedin-link {
     display: inline-block;
     margin-top: 5px;
-    color: #bc5090;
+    color: #0077B5;
     text-decoration: none;
     font-size: 0.9em;
     transition: color 0.3s ease;
 }
 
 .linkedin-link:hover {
-    color: #ff6361;
+    color: #005582;
 }
 
 .fab {
@@ -184,10 +184,27 @@ button:active {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    color: #ffffff;
 }
 
 .topic-btn:hover {
-    background-color: #002f48;
+    background-color: #ff6361; /* Red or orange shade */
+}
+
+.topic-btn.green {
+    background-color: #28a745;
+}
+
+.topic-btn.green:hover {
+    background-color: #dc3545; /* Red or orange shade */
+}
+
+.topic-btn.purple {
+    background-color: #6f42c1;
+}
+
+.topic-btn.purple:hover {
+    background-color: #e83e8c; /* Red or orange shade */
 }
 
 /* Adding images */
