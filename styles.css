@@ -7,8 +7,29 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    overflow-y: auto;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .container {
@@ -18,7 +39,7 @@ body {
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin: 20px 0;
     position: relative;
 }
 
@@ -43,11 +64,11 @@ header {
 
 .question {
     margin-bottom: 25px;
-    color: #2c3e50; /* Darker color for questions */
+    color: #2c3e50;
 }
 
 .question.answered {
-    color: #ffa600; /* Different color when answered */
+    color: #ffa600;
 }
 
 label {
@@ -188,7 +209,7 @@ button:active {
 }
 
 .topic-btn:hover {
-    background-color: #ff6361; /* Red or orange shade */
+    background-color: #ff6361;
 }
 
 .topic-btn.green {
@@ -196,7 +217,7 @@ button:active {
 }
 
 .topic-btn.green:hover {
-    background-color: #dc3545; /* Red or orange shade */
+    background-color: #dc3545;
 }
 
 .topic-btn.purple {
@@ -204,7 +225,7 @@ button:active {
 }
 
 .topic-btn.purple:hover {
-    background-color: #e83e8c; /* Red or orange shade */
+    background-color: #e83e8c;
 }
 
 /* Adding images */
