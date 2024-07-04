@@ -9,6 +9,12 @@
     <script src="https://kit.fontawesome.com/092d2dd854.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="banner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <div class="container">
         <header>
             <h1 class="title">BioResearch Blueprint Hub</h1>
@@ -25,7 +31,6 @@
                     <option value="biochemistry">Biochemistry</option>
                 </select>
             </div>
-
             <div class="question">
                 <label for="objective">Study Objective:</label>
                 <select name="objective" id="objective" required>
@@ -35,7 +40,6 @@
                     <option value="methods">Developing/improving methods</option>
                 </select>
             </div>
-
             <div class="question">
                 <label for="studyType">Study Type:</label>
                 <select name="studyType" id="studyType" required>
@@ -46,7 +50,6 @@
                     <option value="meta-analysis">Meta-analysis</option>
                 </select>
             </div>
-
             <div class="question">
                 <label for="dataCollection">Data Collection Method:</label>
                 <select name="dataCollection" id="dataCollection" required>
@@ -57,7 +60,6 @@
                     <option value="secondary">Secondary data</option>
                 </select>
             </div>
-
             <div class="question">
                 <label for="dataType">Data Type:</label>
                 <select name="dataType" id="dataType" required>
@@ -67,7 +69,6 @@
                     <option value="both">Both</option>
                 </select>
             </div>
-
             <button type="submit">Generate Blueprint</button>
         </form>
     </div>
