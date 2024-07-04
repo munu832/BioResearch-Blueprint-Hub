@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/092d2dd854.js" crossorigin="anonymous"></script>
+    <style>
+        .typing-effect {
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+    </style>
 </head>
 <body>
     <div class="video-container">
@@ -15,22 +35,30 @@
             Your browser does not support the video tag.
         </video>
     </div>
-<body>
     <div class="container">
         <header>
-            <h1>Study Type Details</h1>
+            <h1 class="typing-effect">Study Type Details</h1>
         </header>
+        <nav class="topic-nav">
+            <button class="topic-btn" data-topic="Ecology">Experimental Study</button>
+            <button class="topic-btn" data-topic="Genetics">Observational Study</button>
+            <button class="topic-btn" data-topic="Microbiology">Survey</button>
+            <button class="topic-btn" data-topic="Biochemistry">Meta Analysis</button>
+        </nav>
         <main id="detailedRecommendation"></main>
-        <button onclick="window.location.href='recommendations.html'">Back to Recommendations</button>
+        <section id="references"></section>
     </div>
-     <div class="author-info">
+    <div class="author-info">
         <div class="author-card">
             <div class="author-details">
                 <h3>Kavindu Munugoda</h3>
-                <p>Creator of BioResearch Blueprint Hub</p>              
+                <p>Creator of BioResearch Blueprint Hub</p>
+                <a href="https://www.linkedin.com/in/kavindu-munugoda-18436bb6/" target="_blank" class="linkedin-link">
                     <i class="fab fa-linkedin"></i> Connect on LinkedIn
                 </a>
             </div>
+        </div>
+    </div>
     <script src="research_topic_detail.js"></script>
 </body>
 </html>
