@@ -1,0 +1,86 @@
+/* Existing styles remain the same */
+
+.author-info {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.author-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.author-details {
+    flex-grow: 1;
+}
+
+.author-details h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+.author-details p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+.linkedin-link {
+    display: inline-block;
+    margin-top: 5px;
+    color: #0077B5;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #00A0DC;
+}
+
+.fab {
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .author-info {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .author-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .author-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .author-details {
+        text-align: center;
+    }
+}
