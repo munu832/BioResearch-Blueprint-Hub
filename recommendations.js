@@ -33,16 +33,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    const detailPages = {
+        'Research Topic': 'research_topic_detail.html',
+        'Study Objective': 'study_objective_detail.html',
+        'Study Type': 'study_type_detail.html',
+        'Data Collection': 'data_collection_detail.html',
+        'Data Type': 'data_type_detail.html'
+    };
+
     function getRecommendation(category, value) {
         if (!category || !value) return '';
 
         const recommendation = recommendations[category][value] || 'Ensure your choice aligns with your research goals and methodology.';
+        const detailPage = detailPages[category] || 'detail.html';
 
         return `
             <div class="recommendation">
                 <h3>${category}: ${value}</h3>
                 <p>${recommendation}</p>
-                <a href="detail.html?category=${encodeURIComponent(category)}&value=${encodeURIComponent(value)}">Get more information</a>
+                <a href="${detailPage}?value=${encodeURIComponent(value)}">Get more information</a>
             </div>
         `;
     }
