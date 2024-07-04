@@ -55,5 +55,6 @@ function getRecommendation(title, value) {
     return `<div class="recommendation">
                 <h3>${title}: ${value}</h3>
                 <p>${recommendation}</p>
+                <a href="detail.html?category=${encodeURIComponent(title)}&value=${encodeURIComponent(value)}">Get more information</a>
             </div>`;
 }
