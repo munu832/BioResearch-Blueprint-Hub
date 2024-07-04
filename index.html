@@ -6,7 +6,7 @@
     <title>BioResearch Blueprint Hub</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/092d2dd854.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -15,12 +15,64 @@
             <p class="tagline">Your Guide to Crafting Perfect Research Projects</p>
         </header>
         <form id="researchForm">
-            <!-- Form content remains the same -->
+            <div class="question">
+                <label for="researchTopic">Research Topic:</label>
+                <select name="researchTopic" id="researchTopic" required>
+                    <option value="">Select an option</option>
+                    <option value="ecology">Ecology</option>
+                    <option value="genetics">Genetics</option>
+                    <option value="microbiology">Microbiology</option>
+                    <option value="biochemistry">Biochemistry</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="objective">Study Objective:</label>
+                <select name="objective" id="objective" required>
+                    <option value="">Select an option</option>
+                    <option value="patterns">Identifying patterns</option>
+                    <option value="hypotheses">Testing hypotheses</option>
+                    <option value="methods">Developing/improving methods</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="studyType">Study Type:</label>
+                <select name="studyType" id="studyType" required>
+                    <option value="">Select an option</option>
+                    <option value="experimental">Experimental</option>
+                    <option value="observational">Observational</option>
+                    <option value="survey">Survey</option>
+                    <option value="meta-analysis">Meta-analysis</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="dataCollection">Data Collection Method:</label>
+                <select name="dataCollection" id="dataCollection" required>
+                    <option value="">Select an option</option>
+                    <option value="surveys">Surveys</option>
+                    <option value="experiments">Experiments</option>
+                    <option value="observations">Observations</option>
+                    <option value="secondary">Secondary data</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="dataType">Data Type:</label>
+                <select name="dataType" id="dataType" required>
+                    <option value="">Select an option</option>
+                    <option value="quantitative">Quantitative</option>
+                    <option value="qualitative">Qualitative</option>
+                    <option value="both">Both</option>
+                </select>
+            </div>
+
+            <button type="submit">Generate Blueprint</button>
         </form>
     </div>
     <div class="author-info">
         <div class="author-card">
-            <img src="https://via.placeholder.com/100" alt="Kavindu Munugoda" class="author-image">
             <div class="author-details">
                 <h3>Kavindu Munugoda</h3>
                 <p>Creator of BioResearch Blueprint Hub</p>
