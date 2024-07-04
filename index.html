@@ -7,6 +7,45 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/092d2dd854.js" crossorigin="anonymous"></script>
+    <style>
+        /* Center the heading and tagline */
+        header {
+            text-align: center;
+        }
+
+        /* Scale-up effect for the title */
+        .scale-up {
+            transform: scale(0);
+            animation: scaleUp 1.5s ease-out forwards;
+        }
+        @keyframes scaleUp {
+            to { transform: scale(1); }
+        }
+
+        /* Fade-in effect for content */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Slide-in effect for form */
+        .slide-in {
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideIn 1.5s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+        @keyframes slideIn {
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="video-container">
@@ -17,10 +56,11 @@
     </div>
     <div class="container">
         <header>
-            <h1 class="title">BioResearch Blueprint Hub</h1>
-            <p class="tagline">Your Guide to Crafting Perfect Research Projects</p>
+            <h1 class="title scale-up">BioResearch Blueprint Hub</h1>
+            <p class="tagline fade-in">Your Guide to Crafting Perfect Research Projects</p>
         </header>
-        <form id="researchForm">
+        <form id="researchForm" class="slide-in">
+            <!-- Form content remains the same -->
             <div class="question">
                 <label for="researchTopic">Research Topic:</label>
                 <select name="researchTopic" id="researchTopic" required>
@@ -35,9 +75,9 @@
                 <label for="objective">Study Objective:</label>
                 <select name="objective" id="objective" required>
                     <option value="">Select an option</option>
-                    <option value="patterns">Identifying patterns</option>
-                    <option value="hypotheses">Testing hypotheses</option>
-                    <option value="methods">Developing/improving methods</option>
+                    <option value="patterns">Identifying Patterns</option>
+                    <option value="hypotheses">Testing Hypotheses</option>
+                    <option value="methods">Developing/Improving methods</option>
                 </select>
             </div>
             <div class="question">
@@ -57,7 +97,7 @@
                     <option value="surveys">Surveys</option>
                     <option value="experiments">Experiments</option>
                     <option value="observations">Observations</option>
-                    <option value="secondary">Secondary data</option>
+                    <option value="secondary">Secondary Data</option>
                 </select>
             </div>
             <div class="question">
@@ -72,7 +112,7 @@
             <button type="submit">Generate Blueprint</button>
         </form>
     </div>
-    <div class="author-info">
+    <div class="author-info fade-in">
         <div class="author-card">
             <div class="author-details">
                 <h3>Kavindu Munugoda</h3>
