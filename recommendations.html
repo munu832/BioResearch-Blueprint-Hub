@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/092d2dd854.js" crossorigin="anonymous"></script>
+    <style>
+        /* Center the heading */
+        h1 {
+            text-align: center;
+        }
+
+        /* Scale-up effect for the heading */
+        .scale-up {
+            transform: scale(0);
+            animation: scaleUp 1.5s ease-out forwards;
+        }
+        @keyframes scaleUp {
+            to { transform: scale(1); }
+        }
+
+        /* Fade-in effect for content */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+            animation-delay: 1.5s; /* Start after the heading animation */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <div class="video-container">
@@ -15,13 +41,12 @@
             Your browser does not support the video tag.
         </video>
     </div>
-<body>
     <div class="container">
-        <h1>Research Recommendations</h1>
-        <div id="recommendations"></div>
-        <button onclick="window.location.href='index.html'">Back to Planner</button>
+        <h1 class="scale-up">Research Recommendations</h1>
+        <div id="recommendations" class="fade-in"></div>
+        <button onclick="window.location.href='index.html'" class="fade-in">Back to Planner</button>
     </div>
-     <div class="author-info">
+    <div class="author-info fade-in">
         <div class="author-card">
             <div class="author-details">
                 <h3>Kavindu Munugoda</h3>
@@ -30,6 +55,8 @@
                     <i class="fab fa-linkedin"></i> Connect on LinkedIn
                 </a>
             </div>
+        </div>
+    </div>
     <script src="recommendations.js"></script>
 </body>
 </html>
