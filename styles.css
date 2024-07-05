@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     width: 90%;
     background-color: #ffffff;
     padding: 40px;
@@ -48,7 +48,11 @@ header {
     margin-bottom: 40px;
 }
 
-.title {
+h1.typing-effect {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
     color: #003f5c;
     font-size: 2.5em;
     margin-bottom: 10px;
@@ -169,36 +173,18 @@ button:active {
     margin-right: 5px;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    .title {
-        font-size: 2em;
-    }
-
-    .tagline {
-        font-size: 1em;
-    }
-
-    button {
-        padding: 12px 24px;
-        font-size: 16px;
-    }
-
-    .author-info {
-        width: 100%;
-    }
-}
-
 .topic-nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .topic-btn {
+    flex: 1 0 auto;
+    min-width: 120px;
+    max-width: calc(33.33% - 10px);
     background-color: #003f5c;
     border: none;
     padding: 10px 15px;
@@ -206,6 +192,10 @@ button:active {
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .topic-btn:hover {
@@ -228,7 +218,6 @@ button:active {
     background-color: #e83e8c;
 }
 
-/* Adding images */
 .header-image {
     width: 100%;
     height: 200px;
@@ -263,4 +252,34 @@ button:active {
     background-position: center;
     opacity: 0.2;
     z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1.typing-effect {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .author-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .topic-btn {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
 }
