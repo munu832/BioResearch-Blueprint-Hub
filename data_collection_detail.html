@@ -7,26 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/092d2dd854.js" crossorigin="anonymous"></script>
-    <style>
-        .typing-effect {
-            overflow: hidden;
-            border-right: .15em solid orange;
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .15em;
-            animation: 
-                typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: orange; }
-        }
-    </style>
 </head>
 <body>
     <div class="video-container">
@@ -37,18 +17,22 @@
     </div>
     <div class="container">
         <header>
-            <h1 class="typing-effect">Data Collectin Details</h1>
+           <h1 class="main-title">Data Collection Details</h1>
+            <p class="tagline">Explore various research areas in biology</p>
         </header>
         <nav class="topic-nav">
             <button class="topic-btn" data-topic="Surveys">Surveys</button>
-            <button class="topic-btn" data-topic="Experiments">Experiments</button>
-            <button class="topic-btn" data-topic="Observations">Observations</button>
-            <button class="topic-btn" data-topic="Observations">Secondary Data</button>
+            <button class="topic-btn green" data-topic="Experiments">Experiments</button>
+            <button class="topic-btn purple" data-topic="Observations">Observations</button>
+            <button class="topic-btn blue" data-topic="Secondary Data">Secondary Data</button>
         </nav>
         <main id="detailedRecommendation"></main>
         <section id="references"></section>
     </div>
-     <button onclick="window.location.href='index.html'" class="fade-in">Back to Planner</button>
+    <div class="navigation-container">
+        <button onclick="window.location.href='index.html'" class="back-btn">Back to Planner</button>
+        <p class="navigation-info">Clicking this will go to the initial starting page. If you want to navigate to the previous page, click the back button on your browser.</p>
+    </div>
     <div class="author-info">
         <div class="author-card">
             <div class="author-details">
