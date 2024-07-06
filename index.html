@@ -3,25 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to BioResearch Blueprint Hub</title>
+    <title>BioResearch Blueprint Hub</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/092d2dd854.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="banner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <div class="container">
         <header>
             <h1 class="title scale-up">BioResearch Blueprint Hub</h1>
             <p class="tagline fade-in">Your Guide to Crafting Perfect Research Projects</p>
         </header>
-        <div class="welcome-message fade-in">
-            <h2>Welcome to BioResearch Blueprint Hub!</h2>
-            <p>Join our community of research students and get personalized blueprints for your projects.</p>
-            <div class="button-group">
-                <a href="login.html" class="btn">Login</a>
-                <a href="register.html" class="btn">Register</a>
+        <nav class="main-nav fade-in">
+            <ul>
+                <li><a href="blueprint.html" class="btn"><i class="fas fa-flask"></i> Blueprint</a></li>
+                <li><a href="community.html" class="btn"><i class="fas fa-users"></i> Community Chat</a></li>
+                <li><a href="instruments.html" class="btn"><i class="fas fa-microscope"></i> Research Instruments</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="author-info fade-in">
+        <div class="author-card">
+            <div class="author-details">
+                <h3>Kavindu Munugoda</h3>
+                <p>Creator of BioResearch Blueprint Hub</p>
+                <a href="https://www.linkedin.com/in/kavindu-munugoda-18436bb6/" target="_blank" class="linkedin-link">
+                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                </a>
             </div>
         </div>
     </div>
-    <script src="auth.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
