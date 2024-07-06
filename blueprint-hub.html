@@ -3,104 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioResearch Blueprint Hub</title>
+    <title>Blueprint - BioResearch Blueprint Hub</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/092d2dd854.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="main-nav">
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="banner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="container">
+        <header>
+            <h1 class="title scale-up">Research Blueprint</h1>
+            <p class="tagline fade-in">Design Your Perfect Research Project</p>
+        </header>
+        <form id="researchForm" class="slide-in">
+            <div class="question">
+                <label for="researchTopic">Research Topic:</label>
+                <select name="researchTopic" id="researchTopic" required>
+                    <option value="">Select an option</option>
+                    <option value="ecology">Ecology</option>
+                    <option value="genetics">Genetics</option>
+                    <option value="microbiology">Microbiology</option>
+                    <option value="biochemistry">Biochemistry</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="objective">Study Objective:</label>
+                <select name="objective" id="objective" required>
+                    <option value="">Select an option</option>
+                    <option value="patterns">Identifying Patterns</option>
+                    <option value="hypotheses">Testing Hypotheses</option>
+                    <option value="methods">Developing/Improving Methods</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="studyType">Study Type:</label>
+                <select name="studyType" id="studyType" required>
+                    <option value="">Select an option</option>
+                    <option value="experimental">Experimental</option>
+                    <option value="observational">Observational</option>
+                    <option value="survey">Survey</option>
+                    <option value="meta-analysis">Meta-analysis</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="dataCollection">Data Collection Method:</label>
+                <select name="dataCollection" id="dataCollection" required>
+                    <option value="">Select an option</option>
+                    <option value="surveys">Surveys</option>
+                    <option value="experiments">Experiments</option>
+                    <option value="observations">Observations</option>
+                    <option value="secondary">Secondary Data</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="dataType">Data Type:</label>
+                <select name="dataType" id="dataType" required>
+                    <option value="">Select an option</option>
+                    <option value="quantitative">Quantitative</option>
+                    <option value="qualitative">Qualitative</option>
+                    <option value="both">Both</option>
+                </select>
+            </div>
+            <button type="submit">Generate Blueprint</button>
+        </form>
+        <div id="recommendations" class="fade-in"></div>
+    </div>
+    <nav class="main-nav fade-in">
         <ul>
-            <li><a href="#blueprint" class="tab-link active" data-tab="blueprint"><i class="fas fa-flask"></i> Blueprint</a></li>
-            <li><a href="#community" class="tab-link" data-tab="community"><i class="fas fa-users"></i> Community</a></li>
-            <li><a href="#instruments" class="tab-link" data-tab="instruments"><i class="fas fa-microscope"></i> Instruments</a></li>
-            <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <li><a href="index.html" class="btn"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="community.html" class="btn"><i class="fas fa-users"></i> Community Chat</a></li>
+            <li><a href="instruments.html" class="btn"><i class="fas fa-microscope"></i> Research Instruments</a></li>
         </ul>
     </nav>
-
-    <div class="container">
-        <div id="blueprint" class="tab-content active">
-            <header>
-                <h1 class="title scale-up">BioResearch Blueprint Hub</h1>
-                <p class="tagline fade-in">Your Guide to Crafting Perfect Research Projects</p>
-            </header>
-            <form id="researchForm" class="slide-in">
-                <div class="question">
-                    <label for="researchTopic">Research Topic:</label>
-                    <select name="researchTopic" id="researchTopic" required>
-                        <option value="">Select an option</option>
-                        <option value="ecology">Ecology</option>
-                        <option value="genetics">Genetics</option>
-                        <option value="microbiology">Microbiology</option>
-                        <option value="biochemistry">Biochemistry</option>
-                    </select>
-                </div>
-                <div class="question">
-                    <label for="objective">Study Objective:</label>
-                    <select name="objective" id="objective" required>
-                        <option value="">Select an option</option>
-                        <option value="patterns">Identifying Patterns</option>
-                        <option value="hypotheses">Testing Hypotheses</option>
-                        <option value="methods">Developing/Improving Methods</option>
-                    </select>
-                </div>
-                <div class="question">
-                    <label for="studyType">Study Type:</label>
-                    <select name="studyType" id="studyType" required>
-                        <option value="">Select an option</option>
-                        <option value="experimental">Experimental</option>
-                        <option value="observational">Observational</option>
-                        <option value="survey">Survey</option>
-                        <option value="meta-analysis">Meta-analysis</option>
-                    </select>
-                </div>
-                <div class="question">
-                    <label for="dataCollection">Data Collection Method:</label>
-                    <select name="dataCollection" id="dataCollection" required>
-                        <option value="">Select an option</option>
-                        <option value="surveys">Surveys</option>
-                        <option value="experiments">Experiments</option>
-                        <option value="observations">Observations</option>
-                        <option value="secondary">Secondary Data</option>
-                    </select>
-                </div>
-                <div class="question">
-                    <label for="dataType">Data Type:</label>
-                    <select name="dataType" id="dataType" required>
-                        <option value="">Select an option</option>
-                        <option value="quantitative">Quantitative</option>
-                        <option value="qualitative">Qualitative</option>
-                        <option value="both">Both</option>
-                    </select>
-                </div>
-                <button type="submit">Generate Blueprint</button>
-            </form>
-        </div>
-
-        <div id="community" class="tab-content">
-            <h2>Community Chat</h2>
-            <p>Connect with other researchers and discuss your projects. (Coming Soon)</p>
-        </div>
-
-        <div id="instruments" class="tab-content">
-            <h2>Research Instruments</h2>
-            <p>Explore available research instruments. (Coming Soon)</p>
-        </div>
-    </div>
-
-    <div class="author-info fade-in">
-        <div class="author-card">
-            <div class="author-details">
-                <h3>Kavindu Munugoda</h3>
-                <p>Creator of BioResearch Blueprint Hub</p>
-                <a href="https://www.linkedin.com/in/kavindu-munugoda-18436bb6/" target="_blank" class="linkedin-link">
-                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <script src="auth.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
