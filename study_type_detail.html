@@ -7,16 +7,39 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/092d2dd854.js" crossorigin="anonymous"></script>
+    <style>
+        .topic-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .topic-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #003f5c;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .topic-btn:hover {
+            background-color: #005f8c;
+        }
+        .topic-btn.green { background-color: #4caf50; }
+        .topic-btn.purple { background-color: #9c27b0; }
+        .topic-btn.blue { background-color: #2196f3; }
+    </style>
 </head>
 <body>
     <nav class="top-nav">
         <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i> Blueprint</a></li>
-            <li><a href="community.html"><i class="fas fa-users"></i> Community Chat</a></li>
-            <li><a href="instruments.html"><i class="fas fa-microscope"></i> Research Instruments</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+            <li><a href="instruments.html"><i class="fas fa-microscope"></i> Instruments</a></li>
         </ul>
     </nav>
-
     <div class="video-container">
         <video autoplay loop muted>
             <source src="banner.mp4" type="video/mp4">
@@ -38,8 +61,10 @@
         <section id="references"></section>
     </div>
     <div class="navigation-container">
-        <button onclick="window.location.href='blueprint-hub.html'" class="back-btn">Back to Planner</button>
-        <p class="navigation-info">Clicking this will go to the initial starting page. If you want to navigate to the previous page, click the back button on your browser.</p>
+        <div class="nav-content">
+            <button onclick="window.location.href='blueprint-hub.html'" class="back-btn">Back to Planner</button>
+            <p class="navigation-info">Clicking this will go to the initial starting page. If you want to navigate to the previous page, click the back button on your browser.</p>
+        </div>
     </div>
     <div class="author-info">
         <div class="author-card">
