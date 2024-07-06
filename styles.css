@@ -39,7 +39,7 @@ body {
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+    margin: 80px 0 20px; /* Increased top margin to accommodate the new nav */
     position: relative;
     animation: fadeIn 1s ease-out;
 }
@@ -192,83 +192,57 @@ button:active, .btn:active {
     margin-bottom: 20px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* New styles for the top navigation */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 10px 0;
 }
 
-.question {
-    width: 100%;
-    max-width: 500px;
-    margin-bottom: 25px;
-    color: #2c3e50;
-}
-
-button[type="submit"] {
-    margin-top: 20px;
-}
-
-#recommendations {
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.main-nav {
+.top-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    background-color: #1a5f7a;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
 }
 
-.nav-button {
-    color: #ffffff;
+.top-nav li {
+    margin: 0 15px;
+}
+
+.top-nav a {
+    color: #003f5c;
     text-decoration: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-nav a:hover {
     background-color: #003f5c;
-}
-
-.nav-button:hover {
-    background-color: #005f8c;
-}
-
-.nav-button i {
-    margin-right: 8px;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
     .container {
         padding: 20px;
-        margin-top: 20px;
-    }
-
-    .main-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .nav-button {
-        margin: 5px 0;
+        margin-top: 100px; /* Increased top margin for mobile */
     }
 
     .title {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .tagline {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     button, .btn {
@@ -280,7 +254,143 @@ button[type="submit"] {
         width: 100%;
     }
 
+    .top-nav {
+        padding: 5px 0;
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-nav li {
+        margin: 5px 0;
+    }
+}/* Add or modify these rules in your styles.css file */
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 80px auto 20px; /* Changed: added 'auto' for horizontal centering */
+    position: relative;
+    animation: fadeIn 1s ease-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Added: centers form elements */
+}
+
+.question {
+    width: 100%; /* Added: ensures full width within the form */
+    max-width: 500px; /* Added: limits width for larger screens */
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+button[type="submit"] {
+    margin-top: 20px; /* Added: gives some space above the button */
+}
+
+#recommendations {
+    text-align: center; /* Added: centers the recommendation text */
+    width: 100%; /* Added: ensures full width */
+    max-width: 600px; /* Added: limits width for larger screens */
+    margin: 0 auto; /* Added: centers the recommendations div */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
     .question, #recommendations {
         width: 100%;
     }
+}.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #003f5c;  /* Dark teal background */
+  padding: 10px 0;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #003f5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #005f8c;
+}
+
+.nav-button i {
+  margin-right: 8px;
+}.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Space between tagline and navigation */
+    background-color: rgba(0, 63, 92, 0.9); /* Dark teal background */
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-button i {
+    margin-right: 8px;
+}
+
+/* Ensure the title and tagline are styled correctly */
+.title {
+    color: #003f5c; /* Dark teal color */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    color: #58508d; /* Adjust this color as needed */
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
